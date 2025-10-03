@@ -3,6 +3,10 @@
   border-collapse: collapse;
   margin: 1.5rem 0;
 
+  thead {
+    color: #fff;
+  }
+
   th,
   td {
     border: 1px solid $primary-800;
@@ -15,11 +19,30 @@
 
   tr:hover {
     background-color: $primary-300;
-    cursor: pointer;
   }
 }
 
 .bus-row {
   color: $primary-900;
   text-align: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    padding: 0 1rem;
+    color: $primary-900;
+  }
+}
+button {
+  padding: 0.2rem 0.7rem 0.2rem;
+  border: 1px solid;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $primary-200;
+  }
 }

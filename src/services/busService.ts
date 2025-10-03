@@ -12,17 +12,27 @@ export interface Bus {
   fechaCreacion: string;
   marca: Marca;
 }
+
+export interface BusPage {
+  content: Bus[];
+  totalPages: number;
+  totalElements: number;
+  number: number;
+  size: number;
+}
+
 const BASE_URL = '/bus';
 
-export const getBuses = async (): Promise<Bus[]> => {
-  const response = await fetch(BASE_URL, {
+export const getBusesPage = async (page: number = 0, size: number = 5): Promise<BusPage> => {
+  const response = await fetch(`${BASE_URL}?page=${page}&size=${size}`, {
     headers: {
       Authorization: 'Basic ' + btoa('user:password123'),
     },
   });
+
   if (!response.ok) {
     throw new Error('Error al obtener los buses');
   }
-  const data = await response.json();
-  return data.content || data;
+
+  return await response.json();
 };
