@@ -1,0 +1,25 @@
+.bus-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+
+  th,
+  td {
+    border: 1px solid $primary-800;
+    padding: 0.8rem;
+  }
+
+  th {
+    background-color: $primary-900;
+  }
+
+  tr:hover {
+    background-color: $primary-300;
+    cursor: pointer;
+  }
+}
+
+.bus-row {
+  color: $primary-900;
+  text-align: center;
+}
