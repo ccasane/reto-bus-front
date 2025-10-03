@@ -1,73 +1,25 @@
-# React + TypeScript + Vite
+# Reto Bus Api Front - End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Badge React](https://img.shields.io/badge/React-%2320232a.svg?&logo=react&logoColor=%2361DAFB)
+![Badge TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?&logo=typescript&logoColor=white)
+![Badge SCSS](https://img.shields.io/badge/SCSS-%23CC6699.svg?&logo=sass&logoColor=white)
 
-Currently, two official plugins are available:
+## ✨ Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Esta parte del reto corresponde al frontend del reto Bus API, desarrollado con React + TypeScript + SCSS.
 
-## React Compiler
+## 🚀 Contenido
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Componets**: Contiene los componentes reutilizables, como BusTable y BusRow.
+- **Services**: Define las funciones para consumir la API REST, encargadas del fetch de datos y manejo de errores.
+- **Styles**: Estilos modulares con SCSS.
+- **App**: Punto de entrada principal de la aplicación, donde se integran los componentes.
+- **Main**: Archivo de renderizado que monta la aplicación en el DOM.
 
-## Expanding the ESLint configuration
+## ⚡ Funcionalidades implementadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Listado de buses
+- Paginación en la tabla de buses.
+- Estilos responsivos con SCSS.
+- Manejo de errores cuando la API no responde.
+- Visualización de la marca asociada a cada bus.
