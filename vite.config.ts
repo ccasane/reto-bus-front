@@ -11,4 +11,12 @@ export default defineConfig({
       },
     },
   },
+  server: {
+    proxy: {
+      '/bus': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+      },
+    },
+  },
 });
