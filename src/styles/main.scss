@@ -1,0 +1,8 @@
+@use './base.scss';
+
+#root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background-color: $primary-100;
+}

@@ -1,0 +1,49 @@
+@use './variables.scss' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  line-height: 1.5;
+  font-family: $font-text;
+  text-rendering: optimizeLegibility;
+  color: $primary-100;
+}
+
+span,
+button,
+textarea {
+  font-family: $font-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  line-height: 1.1;
+  font-weight: 400;
+  font-family: $font-text;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  flex: 1;
+}
